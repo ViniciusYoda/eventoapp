@@ -1,14 +1,36 @@
 package com.eventoapp.models;
 
-public class Evento {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Evento implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long codigo;
+
     private String nome;
     private String local;
     private String data;
     private String horario;
 
+    // Getters e Setters
+    public long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
+    }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public void setNome(String nome) {
@@ -16,7 +38,7 @@ public class Evento {
     }
 
     public String getLocal() {
-        return this.local;
+        return local;
     }
 
     public void setLocal(String local) {
@@ -24,7 +46,7 @@ public class Evento {
     }
 
     public String getData() {
-        return this.data;
+        return data;
     }
 
     public void setData(String data) {
@@ -32,11 +54,10 @@ public class Evento {
     }
 
     public String getHorario() {
-        return this.horario;
+        return horario;
     }
 
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
 }

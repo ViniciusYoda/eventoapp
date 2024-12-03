@@ -4,7 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import java.io.Serializable;
+import java.util.List;
+
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Evento implements Serializable {
@@ -20,7 +24,9 @@ public class Evento implements Serializable {
     private String data;
     private String horario;
 
-    // Getters e Setters
+    @OneToMany
+    private List<Convidado> convidados;
+
     public long getCodigo() {
         return codigo;
     }

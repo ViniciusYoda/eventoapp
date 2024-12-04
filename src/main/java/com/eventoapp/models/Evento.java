@@ -1,14 +1,10 @@
 package com.eventoapp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
+import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
-
-import jakarta.persistence.OneToMany;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Evento implements Serializable {
@@ -19,14 +15,22 @@ public class Evento implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigo;
 
+    @NotEmpty(message = "O nome não pode estar vazio")
     private String nome;
+
+    @NotEmpty(message = "O local não pode estar vazio")
     private String local;
+
+    @NotEmpty(message = "A data não pode estar vazia")
     private String data;
+
+    @NotEmpty(message = "O horário não pode estar vazio")
     private String horario;
 
-    @OneToMany
-    private List<Convidado> convidados;
+    @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Convidado> convidados = new ArrayList<>();
 
+    // Getters e setters
     public long getCodigo() {
         return codigo;
     }
@@ -65,5 +69,13 @@ public class Evento implements Serializable {
 
     public void setHorario(String horario) {
         this.horario = horario;
+    }
+
+    public List<Convidado> getConvidados() {
+        return convidados;
+    }
+
+    public void setConvidados(List<Convidado> convidados) {
+        this.convidados = convidados;
     }
 }

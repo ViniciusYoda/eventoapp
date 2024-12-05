@@ -33,7 +33,7 @@ public class EventoController {
 
     @RequestMapping(value = "/cadastrarEvento", method = RequestMethod.POST)
     public String form(@Valid Evento evento, BindingResult result, RedirectAttributes attributes) {
-        if(result.hasErros()){
+        if(result.hashErros()){
             attributes.addFlashAttribute("mensagem", "Verifique os campos");
             return "redirect:/cadastrarEvento"; 
         }

@@ -1,0 +1,35 @@
+/* index.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.menu {
+    background-color: #3399ff;
+    padding: 10px 15px;
+}
+
+.menu .brand-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    background-color: #287bc6;
+    border-radius: 4px;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #555;
+}

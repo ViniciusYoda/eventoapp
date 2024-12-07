@@ -1,0 +1,43 @@
+/* detalhesEvento.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.detalhesEvento {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.detalhesEvento p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.tabelaConvidado {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabelaConvidado th, .tabelaConvidado td {
+    padding: 12px;
+    text-align: left;
+}
+
+.tabelaConvidado thead {
+    background-color: #3399ff;
+    color: #fff;
+}

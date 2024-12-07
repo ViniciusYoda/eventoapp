@@ -1,0 +1,35 @@
+/* eventos.css */
+.table-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-container th, .table-container td {
+    padding: 12px;
+    text-align: left;
+}
+
+.table-container thead {
+    background-color: #3399ff;
+    color: #fff;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-container a {
+    text-decoration: none;
+    color: #3399ff;
+    font-weight: bold;
+}
+
+.table-container a:hover {
+    color: #287bc6;
+}
